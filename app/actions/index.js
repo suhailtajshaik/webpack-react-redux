@@ -6,3 +6,8 @@ export function filterTable(filter) {
         filter
     };
 }
+export function togglePrice() {
+    return {
+        type: types.TOGGLE_PRICE
+    };
+}

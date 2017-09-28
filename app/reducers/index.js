@@ -11,10 +11,20 @@ const filter = (state = '', action) => {
     }
 };
 
+const toggle = (state = false, action) => {
+    switch (action.type) {
+        case types.TOGGLE_PRICE:
+            return !state;
+        default:
+            return state;
+    }
+};
+
 
 const rootReducer = combineReducers({
     filter,
-    routing
+    routing,
+    toggle
 });
 
 export default rootReducer;
